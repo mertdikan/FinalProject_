@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace WepAPI.Controllers
@@ -29,7 +30,8 @@ namespace WepAPI.Controllers
             //Swagger
             //Dependency Chain
             //Ioc container -- Inversion of control
-            
+
+            Thread.Sleep(5000);
             var result = _productService.GetAll();
             if (result.Success)
             {
